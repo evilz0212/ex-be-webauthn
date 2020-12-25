@@ -1,4 +1,3 @@
-<!-- 
 # Setting
 
 ## Step.1 主機環境設定
@@ -23,5 +22,4 @@
 2. php artisan key:generate
 3. php artisan jwt:secret
 4. 建立 laravel 資料庫
-5. php artisan migrate    
--->
+5. php artisan migrate

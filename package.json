@@ -1,13 +1,11 @@
 {
+    "name": "laravel-webauthn",
     "private": true,
     "scripts": {
-        "dev": "npm run development",
-        "development": "cross-env NODE_ENV=development node_modules/webpack/bin/webpack.js --progress --config=node_modules/laravel-mix/setup/webpack.config.js",
-        "watch": "npm run development -- --watch",
-        "watch-poll": "npm run watch -- --watch-poll",
-        "hot": "cross-env NODE_ENV=development node_modules/webpack-dev-server/bin/webpack-dev-server.js --inline --hot --disable-host-check --config=node_modules/laravel-mix/setup/webpack.config.js",
-        "prod": "npm run production",
-        "production": "cross-env NODE_ENV=production node_modules/webpack/bin/webpack.js --no-progress --config=node_modules/laravel-mix/setup/webpack.config.js"
+        "docker-up": "cd .Laradock && docker-compose up -d nginx mysql",
+        "docker-down": "cd .Laradock && docker-compose down",
+        "docker-restart": "cd .Laradock && docker-compose -f 'docker-compose.yml' restart",
+        "docker-bash": "cd .Laradock && docker-compose exec workspace bash"
     },
     "devDependencies": {
         "axios": "^0.19",
