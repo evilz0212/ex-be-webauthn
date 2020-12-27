@@ -21,9 +21,9 @@
 <!-- Overview (Preview\Purpose\Description) -->
 ![webauthn-api](./public/preview.jpg)
 
-## Overview
+# Overview
 > 使用雙重因素登入（密碼+生物辨識）
-#### Target
+### Target
 1. Docker 快速部署前後端專案
    - Laradock 環境建置
    - nginx-proxy 反向代理後端 api
@@ -38,8 +38,8 @@
    - Jwt-auth token 驗證機制
    - Laravel-webauthn 生物辨識套件(2FA)
 
-#### Detail
--  雲端主機：
+### Detail
+-  雲端主機：
    -  Server：GCP, Cloud DNS, VM(ubuntu 18.04)
    -  Domain：freenom
    -  SSL：sslforfree
@@ -48,13 +48,13 @@
 -  應用套件：tymon/jwt-auth、asbiin/laravel-webauthn
 
 <!-- Get started (Install\Step) -->
-## Get started
-#### Step.1 主機環境設定
+# Get started
+### Step.1 主機環境設定
 
 1. Install docker & docker-compose
 2. git clone
 
-#### Step.2 專案設定
+### Step.2 專案設定
 
 1. Copy .env file
 ```
@@ -66,7 +66,7 @@ cp .Laradock/env-example .Laradock/.env
 ```
 cd .Laradock && docker-compose up -d nginx mysql
 ```
-#### Step.3 專案設定(進入 docker bash)
+### Step.3 專案設定(進入 docker bash)
 
 1. Create mysql database
 ```
@@ -83,20 +83,20 @@ php artisan jwt:secret
 php artisan migrate
 ```
 
-#### Step.4 開啟測試頁
+### Step.4 開啟測試頁
 
 1. 修改本機 host ```127.0.0.1 carlos-webauthn-example.tk```
 2. 後端首頁：https://carlos-webauthn-example.tk:8899/
 
-## APIs
-#### JWT Login
+# APIs
+### JWT Login
 POST ```/api/auth/register```：Register a new member
 
 POST ```/api/auth/login```：Member login
 
 GET ```/api/auth/getUser```：Update member information
 
-#### Webauthn
+### Webauthn
 GET ```/api/webauthn/register```：Get datas to register a new key
 
 POST ```/api/webauthn/register```：Post datas after a WebAuthn register check
